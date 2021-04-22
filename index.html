@@ -25,19 +25,19 @@
       type="text/css"
     />
 
-    <!-- 'alcohol',
- 'malic_acid',
- 'ash',
- 'alcalinity_of_ash',
+    <!-- 'Date',
+ 'Hour',
+ 'Temperature(C)',
  'magnesium',
- 'total_phenols',
- 'flavanoids',
- 'nonflavanoid_phenols',
- 'proanthocyanins',
- 'color_intensity',
- 'hue',
- 'od280/od315_of_diluted_wines',
- 'proline' -->
+ 'Wind Speed(m/s)',
+ 'Visibility(10m)',
+ 'Dew point temperature(C)',
+ 'Solar Radiation(MJ/m2)',
+ 'Rainfall(mm)',
+ 'Seasons',
+ 'Holiday',
+ 'Functioning Day',
+ 'Rented Bike Count' -->
   </head>
 
   <body>
@@ -47,45 +47,33 @@
       <!-- Main Input For Receiving Query to our ML -->
       <form action="{{ url_for('predict')}}" method="post">
         <div>
-          <label>Alcohol : </label>
-          <input type="text" name="alcohol" placeholder="alcohol" required="required" />
+          <label>Date : </label>
+          <input type="text" name="Date" placeholder="Date" required="required" />
         </div>
         <br />
         <div>
-          <label>Malic Acid : </label>
-          <input type="text" name="malic" placeholder="Malic Acid" required="required" />
+          <label>Hour : </label>
+          <input type="text" name="Hour" placeholder="Hour" required="required" />
         </div>
         <br />
 
         <div>
-          <label>Ash: </label>
+          <label>Temperature(C): </label>
           <input
             type="text"
-            name="ash"
-            placeholder="ash  "
+            name="Temperature(C)"
+            placeholder="Temperature(C)  "
             required="required"
           />
         </div>
         <br />
 
         <div>
-          <label>Alcalinity of ASH : </label>
+          <label>Humidity(%): </label>
           <input
             type="text"
-            name="alcalinity_of_ash"
-            placeholder="alcalinity_of_ash "
-            required="required"
-          />
-        </div>
-
-        <br />
-
-        <div>
-          <label>Magnesium  : </label>
-          <input
-            type="text"
-            name="magnesium"
-            placeholder="Magnesium"
+            name="Humidity(%)"
+            placeholder="Humidity(%) "
             required="required"
           />
         </div>
@@ -93,66 +81,11 @@
         <br />
 
         <div>
-          <label>Total Phenols : </label>
+          <label>Wind Speed(m/s)  : </label>
           <input
             type="text"
-            name="total_phenols"
-            placeholder="Total Phenols"
-            required="required"
-          />
-        </div>
-
-        <br />
-        <div>
-          <label>Flavanoids : </label>
-          <input
-            type="text"
-            name="flavanoids"
-            placeholder="Flavanoids"
-            required="required"
-          />
-        </div>
-
-        <br />
-        <div>
-          <label>Non Flavanoid Phenols : </label>
-          <input
-            type="text"
-            name="nonflavanoid_phenols"
-            placeholder="nonflavanoid_phenols"
-            required="required"
-          />
-        </div>
-
-        <br />
-        <div>
-          <label>Proanthocyanins: </label>
-          <input
-            type="text"
-            name="proanthocyanins"
-            placeholder="proanthocyanins"
-            required="required"
-          />
-        </div>
-
-        <br />
-        <div>
-          <label>Color Intensity : </label>
-          <input
-            type="text"
-            name="color_intensity"
-            placeholder="color_intensity"
-            required="required"
-          />
-        </div>
-
-        <br />
-        <div>
-          <label>Hue : </label>
-          <input
-            type="text"
-            name="hue"
-            placeholder="hue"
+            name="Wind Speed(m/s)"
+            placeholder="Wind Speed(m/s)"
             required="required"
           />
         </div>
@@ -160,22 +93,100 @@
         <br />
 
         <div>
-          <label>Percent diluted_wines : </label>
+          <label>Visibilty(10m) : </label>
           <input
             type="text"
-            name="od280/od315_of_diluted_wines"
-            placeholder="Percent diluted_wines"
+            name="Visibilty(10)"
+            placeholder="Visibilty(10m)"
+            required="required"
+          />
+        </div>
+
+        <br />
+        <div>
+          <label>Dew point temperature(C) : </label>
+          <input
+            type="text"
+            name="Dew point temperature(C)"
+            placeholder="Dew point temperature(C)"
+            required="required"
+          />
+        </div>
+
+        <br />
+        <div>
+          <label>Solar Radiation (MJ/m2) : </label>
+          <input
+            type="text"
+            name="Solar Radiation (MJ/m2)"
+            placeholder="Solar Radiation (MJ/m2)"
+            required="required"
+          />
+        </div>
+
+        <br />
+        <div>
+          <label>Rainfall(mm): </label>
+          <input
+            type="text"
+            name="Rainfall(mm)"
+            placeholder="Rainfall(mm)"
+            required="required"
+          />
+        </div>
+
+        <br />
+        <div>
+          <label>Snowfall(cm) : </label>
+          <input
+            type="text"
+            name="Snowfall(cm)"
+            placeholder="Snowfall(cm)"
+            required="required"
+          />
+        </div>
+
+        <br />
+        <div>
+          <label>Seasons : </label>
+          <input
+            type="text"
+            name="Seasons"
+            placeholder="Seasons"
+            required="required"
+          />
+        </div>
+
+        <br />
+
+        <div>
+          <label>Holiday : </label>
+          <input
+            type="text"
+            name="Holiday"
+            placeholder="holiday"
             required="required"
           />
         </div>
         <br />
 
         <div>
-          <label>Proline  : </label>
+          <label>Functioning day  : </label>
           <input
             type="text"
-            name="proline"
-            placeholder="Proline"
+            name="Fuctioning day"
+            placeholder="Functioning day"
+            required="required"
+          />
+        </div>
+        <br />
+
+        <div>
+          <label>Rented Bike Count  : </label>
+          <input
+            type="text"
+            name="Rented Bike Count"
+            placeholder="Rented Bike Count"
             required="required"
           />
         </div>
