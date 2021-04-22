@@ -20,7 +20,7 @@ def predict():
 
     output = round(prediction[0])
 
-    return render_template('index.html', prediction_text='Wine Class is  {}'.format(output))
+    return render_template('index.html', prediction_text='Linear Regression  {}'.format(output))
 
 
 if __name__ == "__main__":
